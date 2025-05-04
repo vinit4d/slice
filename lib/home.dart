@@ -30,7 +30,7 @@ class _HomeState extends State<Home> {
           child: BlocBuilder<LocationBloc, LocationState>(
             builder: (context, state) {
               if (state is LocationInitial) {
-                Future.delayed(const Duration(seconds: 2), () {
+                Future.delayed(const Duration(seconds: 5), () {
                   context.read<LocationBloc>().add(LoadLocationInitial());
                 });
               }
